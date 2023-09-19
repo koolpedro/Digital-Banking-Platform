@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.username }}!</h2>
+    
+    <form action="{{ url_for('logout') }}" method="POST">
+        <input type="submit" value="Log Out">
+    </form>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+    {% if user %}
+        <p>Welcome, {{ user.username }}!</p>
+        <p>Account Balance: {{ user.balance }}</p>
+        <a href="/balance">View Balance</a><br>
+        <a href="/transfer">Transfer Funds</a><br>
+        <a href="/transaction_history">Transaction History</a><br>
+        <a href="/logout">Logout</a>
+    {% else %}
+        <p>Please <a href="/login">login</a> to view your profile.</p>
+    {% endif %}
+</body>
+</html> -->

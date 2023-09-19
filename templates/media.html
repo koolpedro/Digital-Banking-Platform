@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Personal</a></li>
+            <li><a href="{{ url_for('login') }}">Business</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        </div>
+        <h1>Media</h1>
+    </header>
+    <section>
+        <h2>Press Releases</h2>
+        <p>Include links or summaries of your press releases.</p>
+    </section>
+    <section>
+        <h2>News Coverage</h2>
+        <p>Provide links or excerpts from news articles featuring your company.</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Talisi Banking Web Platform</p>
+    </footer>
+</body>
+</html>

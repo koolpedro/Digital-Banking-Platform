@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/customer-details-style.css') }}">
+</head>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('login') }}">Personal</a></li>
+        <li><a href="{{ url_for('business') }}">Business</a></li>
+    </ul>
+</nav>
+<header>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+    </div>
+    <!-- <h2>Customer Details Form</h2> -->
+</header>
+<body>
+    <h2>LOGIN PAGE</h2>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    
+    <form action="{{ url_for('login') }}" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <input type="submit" value="Login">
+    </form>
+    
+    <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a>.</p>
+
+
+    
+</body>
+
+</html>
+
+<footer class="copyright">
+    &copy; 2023 Talisi Banking Web Platform
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#login-form").submit(function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            var username = $("#username").val();
+            var password = $("#password").val();
+
+            // Create an object with the data
+            var data = {
+                "username": username,
+                "password": password
+            };
+
+            // Send an AJAX POST request to the Flask route
+            $.ajax({
+                type: "POST",
+                url: "/login",
+                data: data,
+                success: function (response) {
+                    // Handle the response from the server
+                    alert(response.message); // Display a success message
+                    if (response.redirect) {
+                        window.location.href = response.redirect; // Redirect to another page (e.g., profile)
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle errors
+                    alert("Error: " + xhr.responseText);
+                }
+            });
+        });
+    });
+</script>

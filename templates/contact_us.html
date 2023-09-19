@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('personal') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <section>
+        <h2>Get in Touch</h2>
+        <p>Provide contact information or a contact form.</p>
+    </section>
+    <section>
+        <h2>Location</h2>
+        <p>Include your company's address or location details.</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Talisi Banking Web Platform</p>
+    </footer>
+</body>
+</html>

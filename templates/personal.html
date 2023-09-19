@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking Web Platform/personal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/personal-style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('personal') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        <div id="header-buttons">
+            <a href="{{ url_for('login') }}" id="ACCOUNTS">ACCOUNTS</a>
+            <a href="{{ url_for('customer_details') }}" id="LOAN">LOAN</a>
+            <a href="{{ url_for('transfer_fund') }}" id="TRANSFER">TRANSFER</a>
+        </div>
+    </header>
+
+    <main>
+        <a href="{{ url_for('contact_us') }}" id="CONTACT-US">CONTACT US</a>
+    </main>
+    <footer>
+        &copy; 2023 Talisi Banking Web Platform
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

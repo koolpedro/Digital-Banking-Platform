@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/customer-profile-style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        </div>
+        <div id="header-buttons">
+            <h2>TRANSACTION DETAILS</h2>
+            
+            <a href="{{ url_for('index') }}" id="LOGOUT">LOGOUT</a>
+                
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="left-sidebar">
+            <a href="{{ url_for('transfer_fund') }}" id="TRANSFER_FUND">TRANSFER FUND</a>
+        </div>
+    </div>
+
+    <h1>Transaction Details</h1>
+    
+    <!-- Display transaction details here
+    <p><strong>Transaction ID:</strong> {{ transaction_data._id }}</p>
+    <p><strong>Bank:</strong> {{ transaction_data.bank }}</p>
+    <p><strong>Source Account:</strong> {{ transaction_data.source_account }}</p>
+    <p><strong>Destination Account:</strong> {{ transaction_data.destination_account }}</p>
+    <p><strong>Amount:</strong> {{ transaction_data.amount }}</p>
+    <p><strong>Description:</strong> {{ transaction_data.description }}</p>
+    
+    <a href="/">Back to Home</a> -->
+    
+    <footer class="copyright">
+        &copy; 2023 Talisi Banking Web Platform
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

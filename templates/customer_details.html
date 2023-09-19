@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>customer-details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/customer-details-style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('personal') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        </div>
+        <h2>Customer Details Form</h2>
+    </header>
+
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                <form action="{{ url_for('customer_details') }}" method="post">   
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter your birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <!-- <div class="input-field">
+                            <label>Gender</label>
+                            <input type="date" placeholder="Enter your gender" required>
+                        </div> -->
+
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" placeholder="Enter your Occupation" required>
+                        </div>
+
+                        <!-- <div class="input-field">
+                            <label>Username</label>
+                            <input type="text" placeholder="Enter your Username" required>
+                        </div> -->
+
+                        <!-- <div class="input-field">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter your Password" required>
+                        </div> -->
+                    </div>
+                </form>
+
+                <div class="details ID">
+                    <span class="title">Identity Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>ID Type</label>
+                            <input type="text" placeholder="Enter your ID type" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="number" placeholder="Enter your ID number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued Authority</label>
+                            <input type="text" placeholder="Enter issued authority" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued State</label>
+                            <input type="text" placeholder="Enter issued state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Issued Date</label>
+                            <input type="date" placeholder="Enter your issued date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter expiry date" required>
+                        </div>
+                    </div>
+
+
+                        <!-- Add input fields for identity details -->
+                    </div>
+
+
+                    <button class="nextbtn">
+                        <!-- <span class="create account">create Account</span> -->
+                        <main>
+                        <a href="{{ url_for('register') }}" id="SUBMIT">SUBMIT</a>
+                        </main>
+
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+                    
+                </div>
+            </div>
+        </form>
+    </div> 
+    
+    <footer>
+        &copy; 2023 Talisi Banking Web Platform
+    </footer>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#register-form").submit(function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            var username = $("#username").val();
+            var email = $("#email").val();
+            var password = $("#password").val();
+
+            // Create an object with the data
+            var data = {
+                "username": username,
+                "email": email,
+                "password": password
+            };
+
+            // Send an AJAX POST request to the Flask route
+            $.ajax({
+                type: "POST",
+                url: "/register",
+                data: data,
+                success: function (response) {
+                    // Handle the response from the server
+                    alert(response.message); // Display a success message
+                    if (response.redirect) {
+                        window.location.href = response.redirect; // Redirect to another page (e.g., login)
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle errors
+                    alert("Error: " + xhr.responseText);
+                }
+            });
+        });
+    });
+</script>

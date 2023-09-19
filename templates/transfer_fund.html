@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transfer fund</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/customer-profile-style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('personal') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+    </nav>
+
+    <header>
+
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        </div>
+
+        <div id="header-buttons">
+            <h2>TRANSFER FUND</h2>
+            <a href="{{ url_for('index') }}" id="LOGOUT">LOGOUT</a>
+        </div>
+    </header>
+    <h1>Transaction Page</h1>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <a href="{{ url_for('transaction') }}">
+            <button class="profile-button">Transaction</button>
+            </a>
+
+            <!-- <ul>
+                Assuming you have a list of transactions
+                {% for transaction in transaction_list %}
+                    <li><a href="/transaction_details/{{ transaction._id }}">View Transaction</a></li>
+                {% endfor %}
+            </ul> -->
+
+
+
+        </div>
+    
+    <form method="POST" action="/make_payment">
+        <!-- Bank Selection -->
+        <div>
+            <label for="bank">Select Bank:</label>
+            <input type="radio" name="bank" value="Bank 1"> Bank 1
+            <input type="radio" name="bank" value="Bank 2"> Bank 2
+            <!-- Add more bank options as needed -->
+        </div>
+        
+        <!-- Source Account Selection -->
+        <div>
+            <label for="source-account">Source Account:</label>
+            <select name="source-account" id="source-account">
+                <option value="account1">Account 1</option>
+                <option value="account2">Account 2</option>
+                <!-- Add more source accounts as needed -->
+            </select>
+        </div>
+    
+        <!-- Destination Account Selection -->
+        <div>
+            <label for="destination-account">Destination Account:</label>
+            <select name="destination-account" id="destination-account">
+                <option value="accountA">Account A</option>
+                <option value="accountB">Account B</option>
+                <!-- Add more destination accounts as needed -->
+            </select>
+        </div>
+    
+        <!-- Amount Input -->
+        <div>
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" min="0" step="0.01">
+        </div>
+    
+        <!-- Transaction Description Input -->
+        <div>
+            <label for="description">Transaction Description:</label>
+            <input type="text" name="description" id="description">
+        </div>
+    
+        <!-- Submit Button -->
+        <div>
+            <button type="submit">Make Payment</button>
+        </div>
+    </form>
+    
+    
+    <!-- Display Transaction Status -->
+<div id="transaction-status"></div>
+
+<!-- JavaScript to Handle Form Submission -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const transactionForm = document.querySelector('form[action="/make_payment"]');
+        const transactionStatus = document.getElementById("transaction-status");
+
+        transactionForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Collect form data
+            const formData = new FormData(transactionForm);
+
+            // Send the data to the server
+            fetch('/make_payment', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display transaction result to the user
+                transactionStatus.textContent = data.message;
+
+                // Optionally, you can clear the form fields after a successful transaction
+                transactionForm.reset();
+            })
+            .catch(error => {
+                // Handle errors here
+                console.error(error);
+            });
+        });
+    });
+</script>
+
+</div>
+
+    <footer class="copyright">
+        &copy; 2023 Talisi Banking Web Platform
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

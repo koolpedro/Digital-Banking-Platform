@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/customer-profile-style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('personal') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        </div>
+        <div id="header-buttons">
+            <h2>ACCOUNT DETAILS</h2>
+            <a href="{{ url_for('home') }}" id="LOGOUT">LOGOUT</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <a href="{{ url_for('transaction') }}">
+            <button class="profile-button">Transaction</button>
+            </a>
+            <a href="{{ url_for('transfer_fund') }}">
+            <button class="profile-button">Transfer Fund</button>
+            </a>
+        </div>
+
+        
+
+</div>
+    
+    <main>
+        
+        <a href="{{ url_for('customer_details') }}">
+            <button id="UPDATE">UPDATE</button>
+        </a>
+        <a href="{{ url_for('register') }}">
+            <button id="CHANGE-PWD">CHANGE PWD</button>
+        </a>
+    </main>
+    
+    <footer class="copyright">
+        &copy; 2023 Talisi Banking Web Platform
+    </footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

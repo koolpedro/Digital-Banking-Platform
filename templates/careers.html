@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('personal') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        </div>
+        <h1>Careers</h1>
+    </header>
+    <section>
+        <h2>Current Openings</h2>
+        <p>List available job positions and descriptions.</p>
+    </section>
+    <section>
+        <h2>Why Join Us?</h2>
+        <p>Highlight the benefits of working at your company.</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Talisi Banking Web Platform</p>
+    </footer>
+</body>
+</html>
