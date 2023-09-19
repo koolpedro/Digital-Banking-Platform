@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking Web Platform/Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('personal') }}">Personal</a></li>
+            <li><a href="{{ url_for('business') }}">Business</a></li>
+        </ul>
+        
+    </nav>
+
+    <header>
+
+        <img src="{{ url_for('static', filename='images/logo design.png') }}" alt="Talisi Banking Logo">
+        <div id="header-buttons">
+            <a href="{{ url_for('about_us') }}" id="ABOUT-US">ABOUT US</a>
+            <a href="{{ url_for('media') }}" id="MEDIA">MEDIA</a>
+            <a href="{{ url_for('careers') }}" id="CAREERS">CAREERS</a>
+        </div>
+    </header>
+    <marquee style="color: white; font-family: sans-serif; font-weight: 900; font-size: xx-large;"> WELCOME TO TALISI BANK </marquee>
+    
+    <main>
+        
+        <a href="{{ url_for('login') }}" id="EXISTING-USER">EXISTING USER</a>
+        <a href="{{ url_for('customer_details') }}" id="OPEN-ACCOUNT">OPEN ACCOUNT</a>
+        <a href="{{ url_for('contact_us') }}" id="CONTACT-US">CONTACT US</a>
+        
+    </main>
+    <footer class="copyright">
+        &copy; 2023 Talisi Banking Web Platform
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
