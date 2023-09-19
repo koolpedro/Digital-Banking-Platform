@@ -1,0 +1,174 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Push elements to opposite sides */
+    align-items: center;
+    padding: 10px;
+}
+
+body {
+    background-image: url('../images/lap.jpg'); /* Replace with the actual path to your image */
+    background-size: 100%, cover; /* This will make the image cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fixed background, doesn't scroll with content */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: none;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    background-color: white;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#logo {
+    width: 120px; /* Adjust the width as needed */
+    margin-right: 12px;
+}
+
+#header-buttons {
+    display: flex;
+}
+
+#header-buttons button {
+    margin-left: 10px; /* Add spacing between buttons */
+    /* Add button styling as needed */
+}
+
+nav ul {
+    background-color: none;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+}
+#ACCOUNTS {
+    background-color: rgba(66, 127, 66, 0.671);;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#LOAN {
+    background-color: rgba(66, 127, 66, 0.671);;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#TRANSFER {
+    background-color: rgba(66, 127, 66, 0.671);;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#PAYMENTS {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#ONLINE-BANKING {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 250px;
+}
+#OPEN-ACCOUNT {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 250px;
+}
+#CONTACT-US {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 250px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#LOAN-CALCULATOR {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 250px; /* Add margin to move the button closer to the footer */
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+

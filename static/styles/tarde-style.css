@@ -1,0 +1,226 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Push elements to opposite sides */
+    align-items: center;
+    padding: 10px;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/bvb.jpg'); /* Replace with the actual path to your image */
+    background-size: 120%, cover; /* This will make the image cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fixed background, doesn't scroll with content */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: none;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    background-color: white;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+#logo {
+    width: 120px; /* Adjust the width as needed */
+    margin-right: 12px;
+}
+
+#header-buttons {
+    display: flex;
+}
+
+#header-buttons button {
+    margin-left: 10px; /* Add spacing between buttons */
+    /* Add button styling as needed */
+}
+
+nav ul {
+    background-color: none;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+}
+
+#ABOUT-US {
+    background-color: rgba(66, 127, 66, 0.671);;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#MEDIA {
+    background-color: rgba(66, 127, 66, 0.671);;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#CAREERS {
+    background-color: rgba(66, 127, 66, 0.671);;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+
+#ONLINE-BANKING {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 350px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#OPEN-ACCOUNT {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 350px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#CONTACT-US {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 350px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+#LOAN-CALCULATOR {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 350px; /* Add margin to move the button closer to the footer */
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px none #ccc;
+    border-radius: 5px;
+    background-color: none;
+    text-align: justify;
+
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgba(28, 201, 28, 0.671);
+}
+
+.pp{
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: large;
+    color: white;
+}
+
+
+form {
+    display: inline-block;
+    flex-direction: row-reverse;
+    align-items: normal;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 3px 100px;
+    margin: 2px 0;
+}
+
+button {
+    background-color: rgba(66, 127, 66, 0.671);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 5px; /* Add some spacing below the button */
+}
+
+.forgot-password {
+    margin-top: 10px; /* Add some spacing above the "Forgot Password" link */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 4;
+    width: 100%;
+}
+
+
+
